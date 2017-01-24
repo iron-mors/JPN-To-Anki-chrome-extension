@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+
+    "name": "JPN To Anki",
+    "description": "Let's get some new JPN words with context to Anki",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "storage",
+        "tabs",
+        "https://ajax.googleapis.com/",
+        "http://www.sanseido.net/"
+    ],
+    "content_scripts": [
+      {
+        "matches":["http://*/*","https://*/*"],
+        "js": ["handlebars.runtime.min-7535e48.js", "anki_form.js",
+          "page_inject.js"]
+      },
+      {
+        "matches":["http://www.google.co.jp/*"],
+        "js": ["google_images_inject.js"]
+      }
+    ],
+    "background": {
+      "scripts": ["eventPage.js"],
+      "persistent": false
+    },
+    "web_accessible_resources": ["https://yui-s.yahooapis.com/pure/0.6.0/pure-min.css"]
+}

@@ -1,0 +1,28 @@
+<form class="pure-form pure-form-stacked">
+    <fieldset>
+        <legend>Anki flashcard</legend>
+
+        <label for="kanji">Kanji</label>
+        <input id="kanji" placeholder="Kanji" value="{{kanji}}">
+
+        <label for="kana">Kana</label>
+        <input id="kana" placeholder="Kana" value="{{kana}}">
+
+        <label for="image">Image</label>
+        <a id="getImage" class="pure-button" href="#">Choose</a>
+
+        <label for="audio">Audio</label>
+        <a id="getForvo" class="pure-button" href="#">Choose</a>
+
+        <label for="context">Context</label>
+        <input id="context" value="{{context}}">
+
+        <label for="state">Kanji or Kana?</label>
+        <select id="state">
+            <option>Kanji</option>
+            <option>Kana</option>
+        </select>
+
+        <button type="submit" class="pure-button pure-button-primary">Create</button>
+    </fieldset>
+  </form>
