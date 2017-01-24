@@ -1,0 +1,1 @@
+# JPN-To-Anki-chrome-extension
